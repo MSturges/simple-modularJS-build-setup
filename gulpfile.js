@@ -2,7 +2,6 @@ var gulp       = require('gulp'),
     uglify     = require('gulp-uglify'),
     browserify = require('gulp-browserify');
 
-
 gulp.task('modules', function(){
   gulp.src(['src/js/main.js'])
     .pipe(browserify({
@@ -17,6 +16,5 @@ gulp.task('modules', function(){
 gulp.task('watch', function(){
   gulp.watch('src/js/**/*.js', ['modules'])
 });
-
 
 gulp.task('default', ['modules', 'watch']);
