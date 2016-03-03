@@ -1,5 +1,13 @@
-require('./modules/module1.js');
-require('./modules/module2.js');
-require('./modules/module3.js');
+var a = require('./modules/a');
+var b = require('./modules/b');
+var add = require('./modules/add');
 
-console.log('all modules loaded!');
+console.log(
+  'module a = ', a, '\n'+
+  'module b = ', b, '\n'+
+  'module add', add(a,b), '\n\n'
+);
+
+require('./modules/module-one');
+require('./modules/module-two');
+require('./modules/module-tre');
